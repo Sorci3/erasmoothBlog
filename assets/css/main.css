@@ -4154,3 +4154,11 @@ input, select, textarea {
 		}
 
 	}
+
+
+
+	article > .specialTexte{
+		text-align: right;
+		font-weight: bold;
+		color: fff;
+	}
