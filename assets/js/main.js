@@ -143,3 +143,32 @@
 			});
 
 })(jQuery);
+
+// Récupération des éléments
+const openPopupLinks = document.querySelectorAll('.openPopup');
+const closePopupButtons = document.querySelectorAll('.closePopup');
+const popup = document.querySelector('.popup');
+const overlay = document.querySelector('.overlay');
+
+// Afficher la pop-up
+openPopupLinks.forEach(link => {
+  link.addEventListener('click', (e) => {
+	e.preventDefault(); // Empêcher le comportement par défaut du lien
+	popup.style.display = 'block';
+	overlay.style.display = 'block';
+  });
+});
+
+// Fermer la pop-up
+closePopupButtons.forEach(button => {
+  button.addEventListener('click', () => {
+	popup.style.display = 'none';
+	overlay.style.display = 'none';
+  });
+});
+
+// Fermer la pop-up en cliquant sur l'overlay
+overlay.addEventListener('click', () => {
+  popup.style.display = 'none';
+  overlay.style.display = 'none';
+});

@@ -4156,9 +4156,55 @@ input, select, textarea {
 	}
 
 
-
+/*NOT FOOTER ANYMORE*/
 	article > .specialTexte{
 		text-align: right;
 		font-weight: bold;
 		color: fff;
 	}
+
+
+	/* Style de la pop-up */
+    .popup {
+		display: none; /* Masquée par défaut */
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		background-color: #2e3141;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+		border-radius: 8px;
+		padding: 20px;
+		z-index: 1000;
+		width: 700px;
+		max-height: 80vh; /* Hauteur maximale relative à la fenêtre */
+		overflow-y: auto; /* Permettre le défilement vertical */
+		text-align: center;
+	  }
+  
+	  /* Overlay (arrière-plan sombre) */
+	  .overlay {
+		display: none; /* Masquée par défaut */
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.5);
+		z-index: 999;
+	  }
+  
+	  /* Bouton pour fermer la pop-up */
+	  .popup button {
+		margin-top: 20px;
+		padding: 10px 20px;
+		background-color: #007BFF;
+		color: white;
+		border: none;
+		border-radius: 5px;
+		cursor: pointer;
+	  }
+  
+	  .popup button:hover {
+		background-color: #0056b3;
+	  }
