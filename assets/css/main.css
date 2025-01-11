@@ -4220,9 +4220,8 @@ input, select, textarea {
 	  }
   
 	  .gallery {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-		gap: 15px;
+		column-count: 3; /* Nombre de colonnes */
+		column-gap: 15px; /* Espace entre les colonnes */
 		padding: 20px;
 		max-width: 1200px;
 		margin: 0 auto;
@@ -4230,10 +4229,10 @@ input, select, textarea {
   
 	  .gallery img {
 		width: 100%;
-		height: auto;
+		margin-bottom: 15px;
 		border-radius: 8px;
 		transition: transform 0.3s ease, box-shadow 0.3s ease;
-		cursor: pointer;
+		display: block;
 	  }
   
 	  .gallery img:hover {
@@ -4266,12 +4265,8 @@ input, select, textarea {
   
 	  .close {
 		position: absolute;
-		/* height: 10%;
-		width: 10%;
-		top: 40px;
-		right: 40px; */
+		right: 40px; 
 		font-size: 30px;
 		color: white;
-		background-color: red;
 		text-decoration: none;
 	  }
