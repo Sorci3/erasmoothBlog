@@ -4209,6 +4209,13 @@ input, select, textarea {
 		background-color: #0056b3;
 	  }
 
+	  @media screen and (max-width: 480px) {
+
+		.popup {
+			width: 80vh;
+		}
+
+	}
 
 
 	  /*Gallery*/
