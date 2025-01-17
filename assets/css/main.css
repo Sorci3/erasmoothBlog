@@ -4214,6 +4214,7 @@ input, select, textarea {
 	.popup {
 		padding: 15px;
 		font-size: 14px;
+		max-width: 700px;
 	}
 
 	.popup button {
@@ -4226,6 +4227,7 @@ input, select, textarea {
 	.popup {
 		padding: 10px;
 		font-size: 12px;
+		max-width: 400px;
 	}
 
 	.popup button {
