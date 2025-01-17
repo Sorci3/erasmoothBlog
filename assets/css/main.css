@@ -4209,13 +4209,30 @@ input, select, textarea {
 		background-color: #0056b3;
 	  }
 
-	  @media screen and (max-width: 480px) {
-
-		.popup {
-			width: 80vh;
-		}
-
+/* Responsiveness */
+@media (max-width: 768px) {
+	.popup {
+		padding: 15px;
+		font-size: 14px;
 	}
+
+	.popup button {
+		padding: 8px 15px;
+		font-size: 14px;
+	}
+}
+
+@media (max-width: 480px) {
+	.popup {
+		padding: 10px;
+		font-size: 12px;
+	}
+
+	.popup button {
+		padding: 6px 10px;
+		font-size: 12px;
+	}
+}
 
 
 	  /*Gallery*/
