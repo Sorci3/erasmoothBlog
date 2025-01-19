@@ -144,27 +144,36 @@
 
 })(jQuery);
 
+// Article
+
 // Récupération des éléments
 const openPopupLinks = document.querySelectorAll('.openPopup');
 const closePopupButtons = document.querySelectorAll('.closePopup');
-const popup = document.querySelector('.popup');
-const overlay = document.querySelector('.overlay');
 
 // Afficher la pop-up
 openPopupLinks.forEach(link => {
-  link.addEventListener('click', (e) => {
-	e.preventDefault(); // Empêcher le comportement par défaut du lien
-	popup.style.display = 'block';
-	overlay.style.display = 'block';
-  });
+    link.addEventListener('click', (e) => {
+        e.preventDefault(); // Empêcher le comportement par défaut du lien
+        const targetPopup = document.querySelector(`#${link.dataset.target}`);
+        const targetOverlay = document.querySelector(`#${link.dataset.overlay}`);
+        if (targetPopup && targetOverlay) {
+            targetPopup.style.display = 'block';
+            targetOverlay.style.display = 'block';
+        }
+    });
 });
 
 // Fermer la pop-up
 closePopupButtons.forEach(button => {
-  button.addEventListener('click', () => {
-	popup.style.display = 'none';
-	overlay.style.display = 'none';
-  });
+    button.addEventListener('click', () => {
+        const targetId = button.dataset.target;
+        const targetPopup = document.querySelector(`#${targetId}`);
+        const targetOverlay = document.querySelector(`#${targetId.replace('popup', 'overlay')}`);
+        if (targetPopup && targetOverlay) {
+            targetPopup.style.display = 'none';
+            targetOverlay.style.display = 'none';
+        }
+    });
 });
 
 // Fermer la pop-up en cliquant sur l'overlay
