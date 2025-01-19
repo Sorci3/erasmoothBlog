@@ -176,8 +176,3 @@ closePopupButtons.forEach(button => {
     });
 });
 
-// Fermer la pop-up en cliquant sur l'overlay
-overlay.addEventListener('click', () => {
-  popup.style.display = 'none';
-  overlay.style.display = 'none';
-});
