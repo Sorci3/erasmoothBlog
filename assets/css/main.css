@@ -4296,3 +4296,11 @@ input, select, textarea {
 		color: white;
 		text-decoration: none;
 	  }
+
+	  /**/
+	  #boxDataTips {
+		display :flex;
+		margin: 0 auto;
+		max-width: 800px; /* Ajustez selon la largeur du contenu principal */
+		padding: 20px;
+	}
