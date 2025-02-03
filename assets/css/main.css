@@ -4297,6 +4297,11 @@ input, select, textarea {
 		text-decoration: none;
 	  }
 
+	  .captionAndAutor{
+		display : flex;
+		flex-direction: column;
+	  }
+
 	  /**/
 	  #boxDataTips {
 		display :flex;
