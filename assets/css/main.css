@@ -4301,6 +4301,9 @@ input, select, textarea {
 		display : flex;
 		flex-direction: column;
 	  }
+	.credit{
+		font-size: small;
+	}
 
 	  /**/
 	  #boxDataTips {
